@@ -4,7 +4,8 @@
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "dist:linux": "electron-builder --linux"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -14,9 +15,21 @@
     "tutorial",
     "demo"
   ],
-  "author": "GitHub",
+  "author": "GitHub <janez.cadez007@gmail.com>",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^4.0.1"
+    "electron": "4.0.0",
+    "electron-builder": "^20.38.4"
+  },
+  "build": {
+    "appId": "com.janez.electron-quick-start",
+    "linux": {
+      "target": [
+        "deb",
+        "snap",
+        "rpm"
+      ],
+      "category": "Utility"
+    }
   }
 }
