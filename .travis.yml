@@ -10,3 +10,6 @@ deploy:
     secure: $GITHUB_TOKEN
   skip_cleanup: true
   draft: true
+branches:
+  except:
+    - "/^v\\d+\\.\\d+\\.\\d+$/"
