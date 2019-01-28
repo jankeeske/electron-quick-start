@@ -4,3 +4,9 @@ language: node_js
 node_js: "10"
 script:
   - npm run dist
+deploy:
+  provider: releases
+  api_key:
+    secure: $GITHUB_TOKEN
+  skip_cleanup: true
+  draft: true
