@@ -1,5 +1,5 @@
 // Modules to control application life and create native browser window
-const { app, BrowserWindow, Menu } = require("electron");
+const { app, BrowserWindow, Menu, globalShortcut } = require("electron");
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -50,12 +50,26 @@ function createMainMenu() {
   Menu.setApplicationMenu(menu);
 }
 
+function createGlobalShortcut() {
+  globalShortcut.register("CommandOrControl+Alt+A", () => {
+    mainWindow.show();
+    mainWindow.focus();
+    mainWindow.webContents.send("create-list");
+  });
+
+  console.log(
+    "Is global shortcut CommandOrControl+Alt+A registed: ",
+    globalShortcut.isRegistered("CommandOrControl+Alt+A")
+  );
+}
+
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.on("ready", () => {
   createWindow();
   createMainMenu();
+  createGlobalShortcut();
 });
 
 // Quit when all windows are closed.
