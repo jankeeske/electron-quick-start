@@ -58,7 +58,7 @@ function createGlobalShortcut() {
   });
 
   console.log(
-    "Is global shortcut CommandOrControl+Alt+A registed: ",
+    "Is global shortcut CommandOrControl+Alt+A registered: ",
     globalShortcut.isRegistered("CommandOrControl+Alt+A")
   );
 }
