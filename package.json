@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron-packager ."
   },
-  "repository": "https://github.com/kurdoxxx/dops_client",
+  "repository": "https://github.com/jankeeske/DoPs-client",
   "keywords": [
     "darkorbit",
     "private",
