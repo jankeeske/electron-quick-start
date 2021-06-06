@@ -1,22 +1,25 @@
 {
-  "name": "electron-quick-start",
-  "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "name": "dops_client",
+  "version": "0.1",
+  "description": "Darkorbit private server client",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron-packager ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/kurdoxxx/dops_client",
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "darkorbit",
+    "private",
+    "server",
+    "client"
   ],
-  "author": "GitHub",
+  "author": "Jankees",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^4.0.0"
+    "electron": "11.3.0",
+    "electron-packager": "^15.2.0"
+  },
+  "dependencies": {
+    "electron-reload": "^1.5.0"
   }
 }
